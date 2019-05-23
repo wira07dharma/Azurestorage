@@ -43,13 +43,11 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 <body>
 Image to analyze:
  <form action="upload_foto.php" method="post" enctype="multipart/form-data">
- <input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
- <input type="submit" name="submit" value="Upload">
+	 <input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
+	 <input type="submit" name="submit" value="Upload">
  </form>
  <br>
  <table>
- 	
- 
 			<tr>
 				<th>File Name</th>
 				<th>URL</th>
@@ -66,8 +64,8 @@ Image to analyze:
 							<td><?php echo $blob->getUrl() ?></td>
 							<td>
 								<form action="analyze.php" method="post">
-									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">									
-									<input type="submit" name="submit" onclick="processImage()" value="Lihat">
+									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">						
+									<input type="submit" name="submit"  value="Lihat">
 								</form>
 							</td>
 						</tr>

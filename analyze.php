@@ -9,7 +9,6 @@ if (isset($_POST['submit'])) {
 	header("Location: upload_foto.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,7 +17,7 @@ if (isset($_POST['submit'])) {
 	<body>
 				
 				<script type="text/javascript">
-				    function processImage() {
+				    $(document).ready(function (){
 				        // **********************************************
 				        // *** Update or verify the following values. ***
 				        // **********************************************
@@ -78,7 +77,7 @@ if (isset($_POST['submit'])) {
 				                jQuery.parseJSON(jqXHR.responseText).message;
 				            alert(errorString);
 				        });
-				    };
+				    });
 				</script>
 				<br>
 				
