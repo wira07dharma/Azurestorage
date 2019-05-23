@@ -8,15 +8,14 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=subs2reza;AccountKey=zBergnxptxWFL+l+r+eEi6uST/ouNFy0KH2pJNcmUqijOSlti8m2vMMY8ek21fgIkhuv3Ktf8CSl74vJR7nGqA==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=subs2reza;AccountKey=zBergnxptxWFL+l+r+eEi6uST/ouNFy0KH2pJNcmUqijOSlti8m2vMMY8ek21fgIkhuv3Ktf8CSl74vJR7nGqA==";
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$containerName = "subsakhirreza";
+$containerName = "subs2reza";
 	
 if (isset($_POST['submit'])) {
 	$fileToUpload = $_FILES["fileToUpload"]["name"];
-	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
-	echo fread($content, filesize($fileToUpload));
+	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");	echo fread($content, filesize($fileToUpload));
 		
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 	header("Location: upload_foto.php");
@@ -67,8 +66,8 @@ Image to analyze:
 							<td><?php echo $blob->getUrl() ?></td>
 							<td>
 								<form action="analyze.php" method="post">
-									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
-									<input type="submit" name="submit" value="Lihat" class="btn btn-primary">
+									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">									
+									<input type="submit" name="submit" onclick="processImage()" value="Lihat">
 								</form>
 							</td>
 						</tr>
@@ -80,12 +79,6 @@ Image to analyze:
  </table>
 </body>
 </html>
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
