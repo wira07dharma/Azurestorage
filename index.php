@@ -18,7 +18,7 @@ $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
 $createContainerOptions->addMetaData("key1", "value1");
 $createContainerOptions->addMetaData("key2", "value2");
 
-$containerName = "evansubmitdua".generateRandomString();
+$containerName = "azurestorage".generateRandomString();
 
 $blobClient->createContainer($containerName, $createContainerOptions);
 
