@@ -6,9 +6,9 @@ use MicrosoftAzure\Storage\Common\Exceptions\ServiceException;
 use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=subs2reza;AccountKey=zBergnxptxWFL+l+r+eEi6uST/ouNFy0KH2pJNcmUqijOSlti8m2vMMY8ek21fgIkhuv3Ktf8CSl74vJR7nGqA==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=azuremyteststorage;AccountKey=BvcKiWLwo3eQL8NxP3HLZ4kBQ1IJzZqcCQb9pk0lhEvxMIq4cMV6lU+Q1z+KOWjJIVmD5bxEXaqS20g9q6HfHQ==;EndpointSuffix=core.windows.net";
 $blobClient = BlobRestProxy::createBlobService($connectionString);
-$containerName = "subs2reza";
+$containerName = "azurestorage";
 	
 if (isset($_POST['submit'])) {
 	$fileToUpload = $_FILES["fileToUpload"]["name"];
