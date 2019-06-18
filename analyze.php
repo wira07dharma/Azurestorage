@@ -30,8 +30,8 @@ if (isset($_POST['submit'])) {
 				<h1>Hasil Analisa</h1>
 				<script type="text/javascript">
 					$(document).ready(function () {
-						var subscriptionKey = "439ccd15cc8f4540a8612299321e7eb4";
-						var uriBase = "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
+						var subscriptionKey = "4c9bac815f4e4261ac892381517af451";
+						var uriBase = "https://southcentralus.api.cognitive.microsoft.com/";
 						
 						// Request parameters.
 						var params = {
