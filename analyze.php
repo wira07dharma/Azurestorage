@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				<script type="text/javascript">
 					$(document).ready(function () {
 						var subscriptionKey = "4c9bac815f4e4261ac892381517af451";
-						var uriBase = "https://southcentralus.api.cognitive.microsoft.com/";
+						var uriBase = "http://southcentralus.api.cognitive.microsoft.com/";
 						
 						// Request parameters.
 						var params = {
